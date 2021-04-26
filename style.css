@@ -1,0 +1,19 @@
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: none;
+}
+
+.grid-container {
+  background-color: rgba(250, 250, 250, 0.952);
+  height: 960px;
+  width: 960px;
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.square.colored {
+  background-color: chocolate;
+}
