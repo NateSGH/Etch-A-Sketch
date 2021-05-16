@@ -21,7 +21,7 @@ function coloringSquares() {
       }
       if (color === "random") {
         randomColor = generateRandomColor();
-        console.log(randomColor);
+        // console.log(randomColor);
         square.style.backgroundColor = `#${randomColor}`;
       } else {
         if (square.style.backgroundColor === "") {
@@ -31,7 +31,7 @@ function coloringSquares() {
           opacity = parseFloat(opacity.slice(-4, -1));
           if (opacity < 1) {
             opacity = opacity + 0.1;
-            console.log(opacity);
+            // console.log(opacity);
             square.style.backgroundColor = `rgba(0, 0, 0, ${opacity})`;
           } else if (opacity >= 1) {
             square.style.backgroundColor = `rgba(0, 0, 0, 1)`;
@@ -44,7 +44,6 @@ function coloringSquares() {
 
 function createGrid() {
   const lengthSide = gridSpace / squaresPerSide - 2 * squareBorderWidth;
-  console.log(lengthSide);
 
   for (let i = 0; i < Math.pow(squaresPerSide, 2); i++) {
     grid[i] = document.createElement("div");
@@ -73,7 +72,6 @@ resetBtn.addEventListener("click", () => {
     squaresPerSide = userInput;
     createNewGrid();
   }
-  console.log("test");
   clearGrid();
 });
 
@@ -92,7 +90,7 @@ function createNewGrid() {
   });
   createGrid();
   squares = document.querySelectorAll(".square");
-  console.log(squares);
+  // console.log(squares);
 }
 
 colorBtn.addEventListener("click", () => {
